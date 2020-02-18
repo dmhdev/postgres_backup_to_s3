@@ -1,7 +1,7 @@
 # PostgreSQL Backup to Amazon S3
 Script that backs up PostgreSQL Database and uploads it to an Amazon S3 Bucket
 
-Example usage:
+# Example usage:
 
     if __name__ == "__main__":
 
