@@ -1,2 +1,2 @@
 # postgres_to_s3
-Script to dump a PostgreSQL Database and upload to Amazon S3
+Script that backs up PostgreSQL Database and uploads it to Amazon S3 Bucket
