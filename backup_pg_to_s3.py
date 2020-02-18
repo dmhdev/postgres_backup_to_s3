@@ -2,7 +2,7 @@ import os, gzip, boto3, uuid
 from sh import pg_dump
 
 
-class PostgresBackup:
+class PGBackupDB:
 
   def __init__(self, s3_bucket_name, db_backup_file_path, pg_user, pg_pass, pg_db_name):
     self.s3_bucket_name = s3_bucket_name
@@ -32,12 +32,4 @@ class PostgresBackup:
   def delete_db_backup(self):
     os.remove(self.db_backup_file_path)
 
-
-if __name__ == "__main__":
-  
-  postgres_backup = PostgresBackup('my-bucket', '/path/to_db_file.gz', 'ubuntu', 'password', 'example_db')
-
-	postgres_backup.create_db_backup()
-	postgres_backup.push_backup_to_s3()
-  postgres_backup.delete_db_backup()
 	
