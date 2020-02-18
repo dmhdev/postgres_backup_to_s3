@@ -1,8 +1,10 @@
 # PostgreSQL Backup to Amazon S3
 Script that backs up PostgreSQL Database and uploads it to an Amazon S3 Bucket
 
-# Example usage:
+# Usage:
 
+    from backup_pg_to_s3 import PGBackupDB
+    
     if __name__ == "__main__":
 
       pg_backup = PGBackupDB('my-s3-bucket', './db_file_backup.gz', 'ubuntu', 'password', 'example_db')
